@@ -86,7 +86,7 @@ def get_map_link(map_name):
     return map_dict[map_name.lower()]
     pass
 
-intents = discord.Intents.default()
+intents = discord.Intents.all()
 bot = commands.Bot(command_prefix=['iverb ', 'иверб '], intents=intents)
 client = discord.client
 
