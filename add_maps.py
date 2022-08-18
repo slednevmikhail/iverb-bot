@@ -14,10 +14,12 @@ map_dict = {}
 sp_maps = sp_soup.find_all(class_='titlebg')
 coop_maps = coop_soup.find_all(class_='titlebg')
 
-for map in sp_maps:
-    map_dict[map.text.lower()] = map.find('a').get('href')
 for map in coop_maps:
     map_dict[map.text.lower()] = map.find('a').get('href')
+    print(map.text)
+for map in sp_maps:
+    map_dict[map.text.lower()] = map.find('a').get('href')
+    print(map.text)
 
 filehandler = open('maps_list.pickle', 'wb')
 pickle.dump(map_dict, filehandler)
