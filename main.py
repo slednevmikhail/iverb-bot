@@ -1,4 +1,4 @@
-import re
+﻿import re
 
 import requests  # установи
 import pickle  # дефолтная хуйня устанавливать не надо
@@ -90,4 +90,3 @@ def Test(): #ИДИ НАХУЙ
     #print(is_exists('тюбик'))
     #print(is_exists('76561198015267733'))
     get_map_players('Core')
-Test()
