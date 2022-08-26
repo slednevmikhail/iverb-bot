@@ -116,10 +116,10 @@ def get_soup(map_link):
 
 def formatted_run_info(map_name):
     wr_info = get_wr_info(map_name)
-    print(f'``` WR on map {map_name}: '
-          f'\n {wr_info.player_name} - f{wr_info.time} '
-          f'\n demo - {wr_info.demo_link} '
-          f'\n autorender - {wr_info.autorender_link}```')
+    return (f'**WR on map {map_name}: **'
+            f'\n {wr_info.player_name} - {wr_info.time} '
+            f'\n demo - {wr_info.demo_link} '
+            f'\n autorender - {wr_info.autorender_link}')
 
 
 intents = discord.Intents.all()
@@ -159,6 +159,7 @@ async def убрать(ctx, player_id):
 async def вр(ctx, *map_name):
     map_name_string = ' '.join(map_name)
     return await ctx.send(formatted_run_info(map_name_string))
+
 
 @bot.event
 async def on_ready():
