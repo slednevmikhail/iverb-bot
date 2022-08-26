@@ -158,7 +158,7 @@ async def убрать(ctx, player_id):
 @bot.command()
 async def вр(ctx, *map_name):
     map_name_string = ' '.join(map_name)
-    return await ctx.send(formatted_run_info(map_name))
+    return await ctx.send(formatted_run_info(map_name_string))
 
 @bot.event
 async def on_ready():
