@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-
+from token import token
 import re
 
 import requests  # установи
@@ -166,4 +166,4 @@ async def on_ready():
     print('My Ready is Body')
 
 
-bot.run('MTAwODQyNDc3MjQwNjg4NjQ3Mw.G6Mx_t.zq9LLlJht8lMqndTDhEWa6a4f0q3PE7D7_uxWs')
+bot.run(token)
