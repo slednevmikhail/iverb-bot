@@ -3,9 +3,9 @@ from discord.ext import commands
 from token import token
 import re
 
-import requests  # установи
-import pickle  # дефолтная хуйня устанавливать не надо
-from bs4 import BeautifulSoup  # установить
+import requests 
+import pickle  
+from bs4 import BeautifulSoup 
 
 read_filehandler = open('players.pickle', 'rb')
 player_id_list = pickle.load(read_filehandler)
@@ -22,7 +22,7 @@ def load_players():
     read_filehandler.close()
 
 
-def add_player(iverb_id):  # для добавления игроков
+def add_player(iverb_id): 
     load_players()
     if not is_exists(iverb_id) or iverb_id in player_id_list:
         return False
@@ -85,7 +85,7 @@ def get_results(iverb_id, page_soup):  # это не суй в бота
     pass
 
 
-def save_players():  # это не суй в бота
+def save_players(): 
     edit_fileholder = open('players.pickle', 'wb')
     pickle.dump(player_id_list, edit_fileholder)
     edit_fileholder.close()
